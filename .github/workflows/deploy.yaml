@@ -26,8 +26,8 @@ jobs:
           docker push myregistry.azurecr.io/flaskapp:${{ github.sha }}
 
       - name: Set AKS Context
-        run: az aks get-credentials --resource-group myRG --name myAKSCluster --overwrite-existing
+        run: az aks get-credentials --resource-group flaskdemo --name myAKSCluster --overwrite-existing
 
       - name: Deploy to AKS
         run: |
-          kubectl set image deployment/flask-deployment flask-container=myregistry.azurecr.io/flaskapp:${{ github.sha }}
+          kubectl set image deployment/flask-deployment flask-container=myregistrydemo.azurecr.io/flaskapp:${{ github.sha }}
