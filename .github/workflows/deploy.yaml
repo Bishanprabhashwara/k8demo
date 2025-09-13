@@ -22,8 +22,8 @@ jobs:
 
       - name: Build and Push Docker image
         run: |
-          docker build -t myregistry.azurecr.io/flaskapp:${{ github.sha }} .
-          docker push myregistry.azurecr.io/flaskapp:${{ github.sha }}
+          docker build -t myregistrydemo.azurecr.io/flaskapp:${{ github.sha }} .
+          docker push myregistrydemo.azurecr.io/flaskapp:${{ github.sha }}
 
       - name: Set AKS Context
         run: az aks get-credentials --resource-group flaskdemo --name myAKSCluster --overwrite-existing
