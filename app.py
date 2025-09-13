@@ -1,7 +1,7 @@
 from flask import Flask
 
 app = Flask(__name__)
-
+#test
 @app.route("/")
 def home():
     return "🚀 Hello from Flask on AKS with Docker & CI/CD!"
