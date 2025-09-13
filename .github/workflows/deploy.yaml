@@ -18,7 +18,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Log in to ACR
-        run: az acr login --name myregistry
+        run: az acr login --name myregistrydemo
 
       - name: Build and Push Docker image
         run: |
